@@ -47,6 +47,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends\
     ros-$ROS_DISTRO-kobuki-driver \
     ros-$ROS_DISTRO-kobuki-ftdi \
     ros-$ROS_DISTRO-kobuki-core \
+    ros-$ROS_DISTRO-kobuki-msgs \
     ros-$ROS_DISTRO-kobuki-dock-drive \
     ros-$ROS_DISTRO-joy \
     ros-$ROS_DISTRO-gmapping \
@@ -60,6 +61,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends\
     ros-$ROS_DISTRO-compressed-image-transport \
     ros-$ROS_DISTRO-theora-image-transport \
     ros-$ROS_DISTRO-rosbridge-suite \
+    ros-$ROS_DISTRO-gazebo-ros \   
+    ros-$ROS_DISTRO-gazebo-plugins \
+    ros-$ROS_DISTRO-depthimage-to-laserscan \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /
