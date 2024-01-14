@@ -56,7 +56,7 @@ def scan_callback(msg):
 
 def laser_sub():
     rospy.Subscriber('/scan', LaserScan, scan_callback)
-    rospy.spinOnce()
+    rospy.spin()
 
 def odom_callback(msg):
     position = msg.pose.pose.position
@@ -65,7 +65,7 @@ def odom_callback(msg):
 
 def odom_sub():
     rospy.Subscriber('/odom', Odometry, odom_callback)
-    rospy.spinOnce()
+    rospy.spin()
 
 
 #SERVICES
