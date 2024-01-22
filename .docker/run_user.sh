@@ -6,6 +6,8 @@ echo -e "Source the workspace with source devel/setup.bash"
 
 docker run -it --privileged \
     --user=$(id -u $USER):$(id -g $USER) \
+    # --cpus=".9"  \
+    # --memory="15G" \
     --group-add sudo \
     --env="DISPLAY" \
     --env="QT_X11_NO_MITSHM=1" \
