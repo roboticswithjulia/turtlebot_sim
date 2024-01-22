@@ -6,8 +6,6 @@ echo -e "Source the workspace with source devel/setup.bash"
 
 docker run -it --privileged \
     --user=$(id -u $USER):$(id -g $USER) \
-    # --cpus=".9"  \
-    # --memory="15G" \
     --group-add sudo \
     --env="DISPLAY" \
     --env="QT_X11_NO_MITSHM=1" \
@@ -22,3 +20,5 @@ docker run -it --privileged \
     --net=host \
     --cap-add=sys_nice \
     turtlebot_sim:latest
+    # --cpus=".9"  \
+    # --memory="15G" \
